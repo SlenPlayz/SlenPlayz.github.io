@@ -6,7 +6,7 @@
 }
 #menu a {
     text-decoration: none;
-    color: White;
+    color: Black;
     display:flexbox;
     background-color:white;
     margin-bottom: 2px;
@@ -19,6 +19,7 @@
     transform: translate(-50%, -50%);
     font-size:5vw;
     text-align:center;
+    font-family: 'Roboto', sans-serif;
 }
 #menu a:hover {
     background-color:teal;

@@ -1,0 +1,26 @@
+#menu li {
+    list-style-type: none;
+    width: 7em;
+    text-align: center;
+    margin-left: -2.5em;
+}
+#menu a {
+    text-decoration: none;
+    color: White;
+    display:flexbox;
+    background-color:teal;
+    margin-bottom: 2px;
+    padding: 2px;
+    margin:0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size:5vw;
+    text-align:center;
+}
+#menu a:hover {
+    background-color:darkcyan;
+    border: none;
+}

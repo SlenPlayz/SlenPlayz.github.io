@@ -8,7 +8,7 @@
     text-decoration: none;
     color: White;
     display:flexbox;
-    background-color:teal;
+    background-color:white;
     margin-bottom: 2px;
     padding: 2px;
     margin:0px;
@@ -21,6 +21,6 @@
     text-align:center;
 }
 #menu a:hover {
-    background-color:darkcyan;
+    background-color:teal;
     border: none;
 }

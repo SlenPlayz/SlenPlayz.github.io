@@ -39,7 +39,7 @@ html, body{
 }
 .navbar{
     color:white;
-    text-decoration:transparent;
+    text-decoration:none;
     padding:12px;
     font:message-box;
 }

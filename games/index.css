@@ -19,7 +19,7 @@
     font-size:5vw;
     text-align:center;
 }
-#menu a:hover{
+#menu a:hover {
     border:solid black;
     border-radius: 20px;
     border-width: 2px;
@@ -33,13 +33,21 @@
 body{
     background-color:lightslategray;
 }
+html, body{
+    margin:0px;
+    padding:0px;
+}
 .navbar{
     color:white;
     text-decoration:transparent;
     padding:12px;
-    font:message-box
+    font:message-box;
 }
-.navbar:hover{
+   .navbar:hover{
     background-color:black;
     opacity: 0.5;
+}
+.topnav{
+    position: absolute;
+    top:1%
 }

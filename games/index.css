@@ -19,7 +19,7 @@
     font-size:5vw;
     text-align:center;
 }
-#menu a:hover {
+#menu a:hover{
     border:solid black;
     border-radius: 20px;
     border-width: 2px;

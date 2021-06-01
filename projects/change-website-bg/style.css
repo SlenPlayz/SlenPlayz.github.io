@@ -1,0 +1,28 @@
+.btn-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  padding: 1%;
+  margin: 0.1%;
+  border-radius: 5px;
+  border-color: transparent;
+}
+.btn:hover{
+  opacity:0.75 ;
+}
+.White{
+  background-color: White;
+}
+.Teal{
+  background-color: teal;
+}
+.Blue{
+  background-color: #05f;
+}
+.Black{
+  background-color: black;
+  color: White;
+}

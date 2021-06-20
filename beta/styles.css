@@ -1,0 +1,27 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+}
+section{
+  height: 90vh;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.home-div{
+  position: relative;
+  top: 50%;
+  width: 100vw;
+}
+.content{
+  display: block;
+  text-align: center;;
+  font-size: 4vh;
+  transform: translate(0,-200%);
+  color: grey;
+}
+.title{
+  color: lightblue;
+  font-size: 5vh;
+}

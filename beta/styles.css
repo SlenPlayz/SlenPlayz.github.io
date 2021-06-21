@@ -1,27 +1,50 @@
-* {
-  padding: 0px;
-  margin: 0px;
+
+html, body{
   background-color: black;
+  margin: 0px;
+  padding: 0px;
 }
 section{
-  height: 90vh;
+  height: 100vh;
+  width: 100vw;
   background-color: black;
   color: white;
   font-family: 'Roboto', sans-serif;
-}
-.home-div{
-  position: relative;
-  top: 50%;
-  width: 100vw;
+  margin: 0px;
+  padding: 0px;
 }
 .content{
   display: block;
-  text-align: center;;
+  text-align: center;
+  position: relative;
+  top: 40%;
   font-size: 4vh;
-  transform: translate(0,-200%);
   color: grey;
+  background: transparent;
+  margin: 0px;
+  padding: 0px;
 }
 .title{
   color: lightblue;
-  font-size: 5vh;
+  font-size:5vh;
+  margin: 0px;
+  padding: 0px;
+}
+.arrow{
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border-bottom: 0.4vw lightblue solid;
+  border-right: 0.4vw lightblue solid;
+  position: relative;;
+  left: 48vw;
+  top: 60vh;
+  transform: rotate(45deg);
+}
+.fa{
+  text-decoration: none;
+  color: white;;
+}
+.social{
+  position: ;
 }

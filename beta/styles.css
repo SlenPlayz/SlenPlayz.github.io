@@ -3,6 +3,7 @@ html, body{
   background-color: black;
   margin: 0px;
   padding: 0px;
+  height: 200vh;
 }
 section{
   height: 100vh;
@@ -43,8 +44,11 @@ section{
 }
 .fa{
   text-decoration: none;
-  color: white;;
+  color: white;
+  margin: 2px;
 }
 .social{
-  position: ;
+  position: relative;
+  top: 90vh;
+  text-align: center;
 }

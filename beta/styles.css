@@ -1,9 +1,19 @@
-
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
 html, body{
   background-color: black;
   margin: 0px;
   padding: 0px;
   height: 200vh;
+  width: 100vw;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  /* Hide scrollbars*/
+  overflow-x: hidden; /* Hide vertical scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 section{
   height: 100vh;
@@ -13,6 +23,8 @@ section{
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   padding: 0px;
+  scroll-snap-align: center;
+  box-sizing:border-box;
 }
 .content{
   display: block;
@@ -44,11 +56,41 @@ section{
 }
 .fa{
   text-decoration: none;
-  color: white;
-  margin: 2px;
+  color: grey;
+  margin: 2%;
+  font-size: 3.8vh !important;
+}
+.nav{
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 4.5%;
+  left: 50%;
+  height: 9vh;
+  transform: translate(-50%, -50%);
+  /*background-color: #1e1e1e;*/
+  width: 100vw;
 }
 .social{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   position: relative;
-  top: 90vh;
-  text-align: center;
+  bottom: 100%;
+  left: 50%;
+}
+.pageNav{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pageNav a{
+  font-size: 140%;
+  text-decoration: none;
+  color: #ababab;
+  margin: 2vw;
 }

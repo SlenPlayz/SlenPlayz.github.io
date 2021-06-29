@@ -1,0 +1,41 @@
+html, body{
+  background-color: black;
+  color: grey;
+  font-family: sans-serif, Helvetica;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.count{
+  color: lightblue;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vh;
+}
+.button-div button{
+  background-color: #141717;
+  border: none;
+  height: 10vh;
+  width: 10vw;
+}
+.button-div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plus{
+  color: lightgreen;
+}
+.minus{
+  color: lightcoral;
+}
+.instructions{
+  position: absolute;
+  top: 85%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}

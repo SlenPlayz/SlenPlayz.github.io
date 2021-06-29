@@ -57,40 +57,23 @@ section{
 .fa{
   text-decoration: none;
   color: grey;
-  margin: 2%;
+  margin: 1%;
   font-size: 3.8vh !important;
 }
 .nav{
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 4.5%;
-  left: 50%;
   height: 9vh;
-  transform: translate(-50%, -50%);
-  /*background-color: #1e1e1e;*/
+  bottom: 0%;
   width: 100vw;
+  /*background-color: #1e1e1e;*/
 }
 .social{
   height: 100%;
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: relative;
-  bottom: 100%;
-  left: 50%;
-}
-.pageNav{
-  height: 100%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.pageNav a{
-  font-size: 140%;
-  text-decoration: none;
-  color: #ababab;
-  margin: 2vw;
 }

@@ -6,14 +6,18 @@ html, body{
   background-color: black;
   margin: 0px;
   padding: 0px;
-  height: 200vh;
   width: 100vw;
+  height: 300vh;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   /* Hide scrollbars*/
   overflow-x: hidden; /* Hide vertical scrollbar */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+*{
+  padding: 0;
+  margin: 0;
 }
 section{
   height: 100vh;
@@ -76,4 +80,40 @@ section{
   align-items: center;
   justify-content: flex-end;
   position: relative;
+}
+.projectDiv{
+  background-color: #282828;
+  color: white;
+  min-width: 150px;
+  max-width: 200px;
+  min-height: 150px;
+  max-height: 200px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  margin: 5px;
+}
+.projectTitle{
+  margin-bottom: 1%;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+.projectSnippet{
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+}
+.projectLink{
+  text-decoration: none;
+}
+.projectWrapper{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+}
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

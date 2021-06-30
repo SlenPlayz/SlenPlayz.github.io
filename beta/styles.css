@@ -84,9 +84,9 @@ section{
 .projectDiv{
   background-color: #282828;
   color: white;
-  min-width: 150px;
+  min-width: 20vh;
   max-width: 200px;
-  min-height: 150px;
+  min-height: 20vh;
   max-height: 200px;
   font-family: 'Roboto', sans-serif;
   border-radius: 5px;
@@ -103,6 +103,7 @@ section{
   padding-top: 3%;
   padding-bottom: 3%;
   padding-left: 3%;
+  font-size: 2vh;
 }
 .projectLink{
   text-decoration: none;

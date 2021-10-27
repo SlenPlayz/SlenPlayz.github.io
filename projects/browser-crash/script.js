@@ -1,5 +1,5 @@
 function Crash(){
-  document.getElementById("dissappear").innerHTML = "Crashed";
+  document.getElementById("disappear").innerHTML = "Crashed";
   let crashVar = 0;
   while(crashVar < 100) {
     console.log("successfully crashed");

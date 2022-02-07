@@ -37,6 +37,9 @@
         let editor
         const params = new URLSearchParams(window.location.search)
         const filename = document.querySelector('#filename')
+        window.onbeforeunload = function() {
+          return true;
+        };
         function newEditor(data) {
             if (editor) {
                 editor.destroy()

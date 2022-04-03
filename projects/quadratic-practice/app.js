@@ -31,6 +31,15 @@ function gen() {
   }else if(type == 3){
     ans = `${asqu}a<sup>2</sup> - ${bsqu}`
     qn.innerHTML = `(${a}a+${b})(${a}a-${b})`
+  }else if (type == 4){
+    ans = `(${a}a+${b})<sup>2</sup>`
+    qn.innerHTML = `${asqu}a<sup>2</sup> + ${absqu} + ${bsqu}`
+  }else if(type == 5){
+    ans = `(${a}a-${b})<sup>2</sup>`
+    qn.innerHTML = `${asqu}a<sup>2</sup> - ${absqu} + ${bsqu}`
+  }else if(type == 6){
+    ans = `(${a}a+${b})(${a}a-${b})`
+    qn.innerHTML = `${asqu}a<sup>2</sup> - ${bsqu}`
   }
   ansEle.innerHTML = ans
 }

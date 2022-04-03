@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=2.0">
   <title>Document</title>
+  <style>
+    .hidden{
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <div><div><input value='1' type="radio" name='radio' checked>
@@ -18,7 +23,10 @@
   <br></div></div>
   <p class="qn"></p>
   <br>
-  
-  <script src="app.js"></script>
+  <button class="regen" onclick='gen()'>Re-Generate</button>
+  <br>
+  <button onclick='shide()' class='ansBtn'>Show answer</button>
+  <p class="ans hidden"></p>
+  <script src="app.js" defer></script>
 </body>
 </html>

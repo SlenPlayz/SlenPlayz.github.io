@@ -1,5 +1,7 @@
 const radioButtons = document.querySelectorAll('input[name="radio"]')
 const qn = document.querySelector('.qn')
+const ansEle = document.querySelector('.ans')
+const ansBtn = document.querySelector('.ansBtn')
 let a
 let b
 let ans
@@ -21,13 +23,23 @@ function gen() {
   bsqu = b*b
   absqu = 2*a*b + 'a'
   if (type == 1){
-    ans = `${asqu}a<sup>2<sup> + ${absqu} + ${bsqu}`
-    qn.innerHTML = `(${a}a+${b})<sup>2<sup>`
+    ans = `${asqu}a<sup>2</sup> + ${absqu} + ${bsqu}`
+    qn.innerHTML = `(${a}a+${b})<sup>2</sup>`
   }else if(type == 2){
-    ans = `${asqu}a<sup>2<sup> - ${absqu} + ${bsqu}`
-    qn.innerHTML = `(${a}a-${b})<sup>2<sup>`
+    ans = `${asqu}a<sup>2</sup> - ${absqu} + ${bsqu}`
+    qn.innerHTML = `(${a}a-${b})<sup>2</sup>`
   }else if(type == 3){
-    ans = `${asqu}a<sup>2<sup> - ${bsqu}`
+    ans = `${asqu}a<sup>2</sup> - ${bsqu}`
     qn.innerHTML = `(${a}a+${b})(${a}a-${b})`
+  }
+  ansEle.innerHTML = ans
+}
+
+function shide(){
+  ansEle.classList.toggle("hidden");
+  if(ansBtn.innerHTML == 'Show answer'){
+    ansBtn.innerHTML = 'Hide answer'
+  }else{
+    ansBtn.innerHTML = 'Show answer'
   }
 }

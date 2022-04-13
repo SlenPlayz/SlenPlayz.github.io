@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>QuickDocs</title>
+</head>
+<body>
+    <div class="menu">
+        <button onclick="document.querySelector('.dialog').classList.remove('hide'); document.querySelector('#filename').value = '';" class="save"><i class="fas fa-download"></i></button>
+        <button onclick="loadFile()" class="upload"><i class="fas fa-upload"></i></button>
+    </div>
+    <div class="editorWrapWrap">
+        <div class="editorWrap">
+            <div id="editor"></div>
+        </div>
+    </div>
+    <div class="dialog hide">
+        <h1>Enter file name:</h1>
+        <input type="text" id="filename">.qdcs
+        <div class="dm">
+            <button class="cancel" onclick="closeDialog()"><i class="fas fa-window-close"></i> Cancel</button>
+            <button class="saveBtn" onclick="save()"><i class="fas fa-download"></i> Save</button>
+        </div>
+    </div>
+    <script src="editor.js"></script>
+    <script src="editorHTML.js"></script>
+    <script src="editorHeader.js"></script>
+    <script src="editorList.js"></script>
+    <script src="editorTable.js"></script>
+    <!-- <script src="imagePlugin.js"></script> -->
+    <script defer>
+        let editor
+        const params = new URLSearchParams(window.location.search)
+        const filename = document.querySelector('#filename')
+        window.onbeforeunload = function() {
+          return true;
+        };
+        function newEditor(data) {
+            if (editor) {
+                editor.destroy()
+            }
+            editor = new EditorJS({
+                holder: 'editor',
+                data: data,
+                tools: {
+                    heading: Header,
+                    list: {
+                        class: List,
+                        inlineToolbar: true,
+                    },
+                    table: {
+                      class: Table,
+                    }
+                    // image: Image,
+                },
+                autofocus: true
+            });
+        }
+        function save() {
+            editor.save().then((Data) => {
+                if (filename.value) {
+                    downloadObjectAsJson(Data, filename.value)
+                }
+                console.log(filename.value)
+            })
+        }
+        function loadFile() {
+            var input = document.createElement('input');
+            input.type = 'file';
+            input.setAttribute('accept', '.qdcs')
+
+            input.onchange = e => { 
+
+            var file = e.target.files[0]; 
+
+            var reader = new FileReader();
+            reader.readAsText(file,'UTF-8');
+
+            reader.onload = readerEvent => {
+                var content = JSON.parse(readerEvent.target.result);
+                newEditor(content)
+            }
+
+            }
+
+            input.click();
+        }
+        function closeDialog() {
+            document.querySelector('.dialog').classList.add('hide')
+            // document.querySelector('#filename').value = ''
+        }
+        function downloadObjectAsJson(exportObj, exportName){
+            var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+            var downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href",     dataStr);
+            downloadAnchorNode.setAttribute("download", exportName + ".qdcs");
+            document.body.appendChild(downloadAnchorNode); // required for firefox
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+            closeDialog()
+        }
+        function getData(){
+          editor.save()
+            .then(data => console.log(data))
+        }
+        if(params.has('data')){
+          newEditor(JSON.parse(params.get('data')))
+        }else{
+          newEditor()
+        }
+    </script>
+    <style>
+        
+    </style>
+</body>
+</html>

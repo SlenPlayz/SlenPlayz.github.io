@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=2.0">
   <title>Practice expansion of quadratic equations</title>
   <style>
-    .hidden{
+    .hidden {
       display: none;
     }
   </style>
 </head>
+
 <body>
-  <div><div><input value='1' type="radio" name='radio' checked>
-  <label>(a+b)<sup>2</sup></label>
-  <br></div>
-  <div></div><input value='2' type="radio" name='radio'>
-  <label>(a-b)<sup>2</sup></label>
-  <br></div>
+  <div>
+    <div><input value='1' type="radio" name='radio' checked>
+      <label>(a+b)<sup>2</sup></label>
+      <br>
+    </div>
+    <div></div><input value='2' type="radio" name='radio'>
+    <label>(a-b)<sup>2</sup></label>
+    <br>
+  </div>
   <div><input value='3' type="radio" name='radio'>
-  <label>(a+b)(a-b)</label>
-  <br></div>  <div></div><input value='4' type="radio" name='radio'>
+    <label>(a+b)(a-b)</label>
+    <br>
+  </div>
+  <div></div><input value='4' type="radio" name='radio'>
   <label>a<sup>2</sup>+2ab+b<sup>2</sup></label>
-  <br></div>  <div></div><input value='5' type="radio" name='radio'>
+  <br></div>
+  <div></div><input value='5' type="radio" name='radio'>
   <label>a<sup>2</sup>-2ab+b<sup>2</sup></label>
-  <br></div>  <div></div><input value='6' type="radio" name='radio'>
+  <br></div>
+  <div></div><input value='6' type="radio" name='radio'>
   <label>a<sup>2</sup>-b<sup>2</sup></label>
-  <br></div></div>
+  <br></div>
+  </div>
   <p class="qn"></p>
   <br>
   <button class="regen" onclick='gen()'>Re-Generate</button>
@@ -35,4 +45,5 @@
   <p class="ans hidden"></p>
   <script src="app.js" defer></script>
 </body>
+
 </html>

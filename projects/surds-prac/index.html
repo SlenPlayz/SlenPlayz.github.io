@@ -9,9 +9,6 @@
       margin: 0;
       padding: 0;
     }
-    html,body{
-      background: black;
-    }
     .container{
       position: absolute;
       top: 50%;
@@ -21,25 +18,29 @@
       flex-direction: column;
     }
     .items{
-      background-color: lightblue;
+      background-color: black;
       border-radius: 10px;
       padding: 5px;
       border: lightblue;
       margin: 5px;
       height: 10vh;
-      width: 300px;
+      width: 80vw;
       font-size: 3vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    a{
+      text-decoration: none;
+      color: white;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <iframe style='border-radius: 5px;' src="https://indify.co/widgets/live/countdown/Mw02XlXHfc2KSyoAyliH" frameborder="0"></iframe>
-    <a href="./sdule/Exp.pdf"><button class="items">Express</button></a>
-    <a href="./sdule/NA.pdf"><button class="items">NA</button></a>
-    <a href="./sdule/NT.pdf"><button class="items">NT</button></a>
     
-<!--     <p style='color: lightblue; font-family: Arial;'>Exams finally over!! :DD</p> -->
+    <a class="items" href="simplify-root">Simplification</a>
+    <a class="items" href="rat-frac">Rationalization</a>
   </div>
 </body>
 </html>

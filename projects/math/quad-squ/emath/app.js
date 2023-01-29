@@ -20,10 +20,9 @@ let gen = () => {
   let methodArr = []
 
   methodArr.push(`x^2 + ${coefficient}x`)
-  methodArr.push(`x^2 ${isS1PositiveBool ? "+": "-"} ${coefficient}x`)
-  methodArr.push(`x^2 ${isS1PositiveBool ? "+": "-"} ${coefficient}x + (\\frac{${coefficient}}{2})^2 - (\\frac{${coefficient}}{2})^2 `)
-  methodArr.push(`(x ${isS1PositiveBool ? "+": "-"} ${coefficient / 2})^2 - (\\frac{${coefficient}}{2})^2`)
-  methodArr.push(`(x ${isS1PositiveBool ? "+": "-"} ${coefficient / 2})^2 ${inverseS1Positive} ${Math.pow(coefficient/2, 2)}`)
+  methodArr.push(`x^2 + ${coefficient}x + (\\frac{${coefficient}}{2})^2 - (\\frac{${coefficient}}{2})^2 `)
+  methodArr.push(`(x^2 + ${coefficient / 2})^2 - (\\frac{${coefficient}}{2})^2`)
+  methodArr.push(`(x + ${coefficient / 2})^2 - ${Math.pow(coefficient/2, 2)}`)
 
   katex.render(qn, qnElem)
   katex.render(methodArr.join(" \\newline = "), ansElem)
